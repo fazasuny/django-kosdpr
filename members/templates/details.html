@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Anggota - {{ mymember.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .info-box {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .info-box p {
+            margin: 0;
+            padding: 5px 0;
+        }
+        .info-box strong {
+            color: #2c3e50;
+        }
+        a {
+            display: inline-block;
+            color: #2980b9;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ mymember.name }}</h1>
+        
+        <div class="info-box">
+            <p><strong>Penjuruan:</strong> {{ mymember.penjuruan }}</p>
+            <p><strong>Asal:</strong> {{ mymember.asal }}</p>
+        </div>
+
+        <p><a href="/members">Kembali ke Daftar Anggota</a></p>
+    </div>
+</body>
+</html>
